@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #000000;  /* ทำให้พื้นหลังดำสนิท */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 60px;  /* กัน Header บังเนื้อหา */
+    padding-bottom: 40px; /* กัน Footer บังเนื้อหา */
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* เมนู */
+nav {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgb(0, 0, 0, 0.1);
+    border-radius: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+nav ul li:hover {
+    background-color: #f1f1f1;
+}
+
+/* ไอคอนแอป */
+.app-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease;
+}
+
+.app-icon:active {
+    transform: scale(1.1);
+}
+
+/* ข้อความ */
+h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #b0b0b0;
+}
+
+/* ปุ่มดาวน์โหลด */
+.download-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #00d800;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 2px solid #000000;
+    transition: 0.3s, transform 0.2s ease;
+}
+
+.download-btn:hover {
+    background: #333;
+    border-color: #777;
+}
+
+.download-btn:active {
+    transform: scale(1.1);
+}
+
+/* ลิงก์ Discord และ GitHub */
+.social-links {
+    margin-top: 50px;
+}
+
+.social-links a {
+    text-decoration: none;
+}
+
+.social-icon {
+    width: 25px;
+    height: 25px;
+    margin: 0 10px;
+    transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* ขยายขนาดเล็กน้อยเมื่อคลิก */
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #000000;
+    color: #b0b0b0;
+    font-size: 12px;
+}
