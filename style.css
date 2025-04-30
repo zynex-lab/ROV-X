@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
+}
+
+body, html {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+nav {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 60px;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  border-radius: 50px;
+}
+
+nav.show {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  padding: 10px 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+nav ul li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Centered Developer Section */
+.center-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 60px;
+}
+
+.center-screen h2 {
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.dev-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  filter: brightness(90%);
+}
+
+.dev-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15);
+  filter: brightness(100%);
+}
+
+.scroll-down {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #888;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
+/* Main App Section */
+.container {
+  padding: 60px 20px 80px;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.app-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.app-icon:hover {
+  transform: scale(1.05);
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #aaa;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  border-radius: 50%;
+  background-color: #00d800;
+  box-shadow: 0 0 5px rgba(0, 216, 0, 0.6);
+  vertical-align: middle;
+}
+
+.status-dot.orange {
+  background-color: #ffa500;
+  box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+}
+
+.status-dot.red {
+  background-color: #ff3b30;
+  box-shadow: 0 0 5px rgba(255, 59, 48, 0.6);
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  background: #fff;
+  color: #000;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 20px;
+  border: none;
+  transition: 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.download-btn:hover {
+  background: #e5e5e5;
+  transform: scale(1.03);
+}
+
+.download-btn:active {
+  transform: scale(0.98);
+}
+
+.social-links {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links a {
+  display: inline-block;
+}
+
+.social-icon {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px;
+  transition: transform 0.2s ease;
+  filter: brightness(90%);
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(100%);
+}
+
+/* Footer (fixed but won't block content) */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #000;
+  color: #b0b0b0;
+  font-size: 12px;
+}
+
+/* Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

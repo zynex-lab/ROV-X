@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ROV X</title>
+  <link rel="icon" sizes="32x32" href="https://img5.pic.in.th/file/secure-sv1/IMG_3105.jpeg">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">ROV X</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="menu">
+      <ul>
+        <li><a href="https://youtu.be/nuiH1sPFQNQ?si=T-tRxLUTa7YWbmya">วิธีติดตั้ง</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Section: ผู้พัฒนา (กลางจอ) -->
+  <section class="center-screen">
+    <h2>DEV LVL1</h2>
+    <a href="https://github.com/zynex-lab" target="_blank">
+      <img src="https://img2.pic.in.th/pic/IMG_415361306ae6c0bb5f5d.jpeg" alt="GitHub Developer" class="dev-icon" />
+    </a>
+    <div class="scroll-down">
+      ↓ เลื่อนลงเพื่อดูรายละเอียด ↓
+    </div>
+  </section>
+
+  <!-- Section: App Info -->
+  <main class="container fade-in">
+    <img src="https://img2.pic.in.th/pic/IMG_4159a51c6abdca214f6f.jpeg" alt="App Icon" class="app-icon" />
+    <h1>
+      <b>ROV X</b>
+      <span class="status-dot green" title="Status: ปกติ"></span>
+    </h1>
+    <p>เวอร์ชั่น 1.58.1.5 | Support iOS<br>developer zynxer</p>
+
+    <a href="https://drive.google.com/file/d/1KBNfcAwd0Ge-Sh_oYSIU15Bf-G4-ODA_/view?usp=drivesdk" class="download-btn">ดาวน์โหลด</a>
+
+    <div class="social-links">
+      <a href="https://discord.gg/dHRbHAFFnQ" target="_blank">
+        <img src="https://img.icons8.com/ios/50/ffffff/discord-logo.png" alt="Discord" class="social-icon" />
+      </a>
+      <a href="https://github.com/zynex-lab" target="_blank">
+        <img src="https://img.icons8.com/ios/50/ffffff/github.png" alt="GitHub" class="social-icon" />
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 zynxer. All rights reserved.</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
