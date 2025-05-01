@@ -88,6 +88,13 @@ nav ul li:hover {
   color: #ffffff;
 }
 
+.dev-tagline {
+  font-size: 14px;
+  color: #bbb;
+  margin-top: -20px;
+  opacity: 0.8;
+}
+
 .dev-icon {
   width: 80px;
   height: 80px;
@@ -137,6 +144,29 @@ nav ul li:hover {
 
 .app-icon:hover {
   transform: scale(1.05);
+}
+
+.badge-new {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: red;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 999px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  animation: pulseBadge 1.5s infinite;
+}
+
+@keyframes softPop {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.badge-new {
+  animation: softPop 2s infinite ease-in-out;
 }
 
 h1 {
