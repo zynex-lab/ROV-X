@@ -133,6 +133,11 @@ nav ul li:hover {
   text-align: center;
 }
 
+.app-icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
 .app-icon {
   width: 100px;
   height: 100px;
@@ -159,6 +164,7 @@ nav ul li:hover {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   animation: pulseBadge 1.5s infinite;
 }
+
 
 @keyframes softPop {
   0%, 100% { transform: scale(1); }
@@ -262,7 +268,7 @@ footer {
 /* New Section: App Information */
 .app-info {
   margin-top: 30px;
-  padding: 20px;
+  padding: 10px;
   background-color: #111;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -271,13 +277,13 @@ footer {
 .app-info h3 {
   font-size: 18px;
   color: #fff;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .app-info p {
   color: #ddd;
   line-height: 1.5;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .app-info ul {
@@ -286,7 +292,7 @@ footer {
 }
 
 .app-info ul li {
-  font-size: 14px;
+  font-size: 13px;
   color: #bbb;
   margin-bottom: 10px;
 }
