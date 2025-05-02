@@ -6,6 +6,7 @@
   <title>ROV X</title>
   <link rel="icon" sizes="32x32" href="https://img5.pic.in.th/file/secure-sv1/IMG_3105.png">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
@@ -22,7 +23,7 @@
 
   <!-- Section: dev -->
   <section class="center-screen">
-    <h2>DEV LVL1</h2>
+    <h3><i class="fas fa-user-cog"></i>  DEV LVL1</h3>
         <p class="dev-tagline">อยากให้อัปเดตเร็วๆก็โอนเงินมาน้อง</p>
     <a href="https://github.com/zynex-lab" target="_blank">
       <img src="https://img2.pic.in.th/pic/IMG_415361306ae6c0bb5f5d.jpeg" alt="GitHub Developer" class="dev-icon" />
@@ -36,28 +37,32 @@
   <main class="container fade-in">
   <div class="app-icon-wrapper">
       <img src="https://img2.pic.in.th/pic/IMG_418924431cd48979ecdd.jpeg" alt="App Icon" class="app-icon" />
-      <span class="badge-new">NEW</span>
+      <span class="badge-new">ใหม่!</span>
     </div>
+
     <h1>
       <b>ROV X</b>
       <span class="status-dot green" title="Status: ปกติ"></span>
     </h1>
-    <p>เวอร์ชั่น 1.58.1.5 | Support iOS<br>Server Thai</p>
+    <p>เวอร์ชั่น 1.58.1.5 | 
+      Support iOS<br>Zynxer Dev
+    </p>
 
     <!-- Download Button -->
 
-    <a href="https://rekonise.com/rov-x-15815-v35io" class="download-btn">ดาวน์โหลด</a>
+    <a href="https://rekonise.com/rov-x-15815-v35io" class="download-btn">GET LINK <i class="fas fa-link"></i></a>
     <p class="message-success">สำเร็จขั้นตอนเพื่อรับลิงก์ (0/2)</p>
-    
+
     <!-- App Information -->
     <section class="app-info">
-      <h3>ข้อมูลแอป</h3>
+      <h3>ข้อมูลแอป <i class="fas fa-cogs"></i></h3>
       <p>ตัวเกมสำหรับลงมอดสกินบน iOS ฟรี<br>ติดตั้งรูปแบบไฟล์ iPA รองรับ Documents Browser</p>
       <ul>
-        <li><strong>ฟีเจอร์หลัก</strong></li>
+        <li><strong><i class="fas fa-bolt"></i> ฟีเจอร์หลัก</strong></li>
         <li>การเพิ่มประสิทธิภาพการเล่น</li>
-        <li><strong>รองรับ</strong></li><li>iOS มีอัปเดตให้เรื่อยๆ แล้วแต่ความขยัน</li>
-        <li><strong>ความปลอดภัย</strong></li><li>ไม่มีการเข้าถึงข้อมูลของผู้ใช้</li>
+        <li><strong><i class="fas fa-mobile-alt"></i> รองรับ</strong></li>
+        <li>ระบบ iOS มีอัปเดตให้เรื่อยๆ แล้วแต่ความขยัน</li>
+        <li><strong><i class="fas fa-shield-alt"></i> ความปลอดภัย</strong></li><li>ไม่มีการเข้าถึงข้อมูลของผู้ใช้</li>
       </ul>
     </section>
 
@@ -82,15 +87,23 @@
       document.getElementById("menu").classList.toggle("show");
     }
 
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
+        const el = entry.target;
         if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
+          el.classList.add("visible");
+        } else {
+          el.classList.remove("visible");
         }
       });
     }, { threshold: 0.1 });
 
     document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+    
   </script>
 </body>
 </html>
